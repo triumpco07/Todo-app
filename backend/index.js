@@ -62,3 +62,5 @@ app.put('/todos', (req, res) => {
         msg: "Todo marked as completed"
     ])
 })
+
+app.listen(3000);
