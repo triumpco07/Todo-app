@@ -9,8 +9,7 @@ Todo{
 */
 const mongoose = require("mongoose")
 
-//mongodb+srv://tussarupadhyay:<>@triumpco.0fthm8k.mongodb.net/?retryWrites=true&w=majority&appName=Triumpco
-mongoose.connect{"mongodb+srv://tussarupadhyay:2kDV5KhrX5mLBMpo@triumpco.0fthm8k.mongodb.net/"}
+mongoose.connect{"mongodb+srv://tussarupadhyay:2kDV5KhrX5mLBMpo@triumpco.0fthm8k.mongodb.net/todos"}
 const todoSchema = mongoose.Schema({
     title: String,
     description: String,
