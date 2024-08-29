@@ -3,7 +3,7 @@
  
 const express = require("express"); // Import required modules
 const {createTodo} = require("./types");
-const { todo } = require(" ./db")
+const { todo } = require("./db")
 const app = express(); // Create an Express application
 
 app.use(express.json()); // Use express.json() middleware to parse JSON request bodies
@@ -53,14 +53,14 @@ app.put('/todos', (req, res) => {
     }
 
     await todo.update({
-        _id.req.body.id
+        _id: req.body.id
     }, {
         completed: true
     })
 
-    res.json([
+    res.json({
         msg: "Todo marked as completed"
-    ])
+    })
 })
 
 app.listen(3000);
